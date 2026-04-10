@@ -99,19 +99,19 @@ const TEAM = [
 
 const BLOG_POSTS = [
   {
-    date: "28 марта 2025",
+    date: "28 марта 2026",
     tag: "Аналитика",
-    title: "Алгоритм Яндекса 2025: что изменилось и как адаптировать стратегию",
+    title: "Алгоритм Яндекса 2026: что изменилось и как адаптировать стратегию",
     read: "8 мин",
   },
   {
-    date: "15 марта 2025",
+    date: "15 марта 2026",
     tag: "Контент",
-    title: "E-E-A-T в Google: как экспертность сайта влияет на позиции в 2025 году",
+    title: "E-E-A-T в Google: как экспертность сайта влияет на позиции в 2026 году",
     read: "6 мин",
   },
   {
-    date: "3 марта 2025",
+    date: "3 марта 2026",
     tag: "Техника",
     title: "Core Web Vitals: полный чеклист оптимизации для роста в поиске",
     read: "11 мин",
@@ -634,7 +634,7 @@ export default function Index() {
                 </a>
               ))}
             </div>
-            <div className="font-body text-xs text-white/30">© 2025 APEX SEO</div>
+            <div className="font-body text-xs text-white/30">© 2026 APEX SEO</div>
           </div>
         </div>
       </footer>
