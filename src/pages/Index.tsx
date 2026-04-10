@@ -92,7 +92,7 @@ const PORTFOLIO = [
 
 const TEAM = [
   { name: "Елена Жукова", role: "Основатель, Head of SEO", exp: "12 лет" },
-  { name: "Екатерина Волкова", role: "Технический SEO-специалист", exp: "8 лет" },
+  { name: "Владислав Жуков", role: "Технический SEO-специалист", exp: "8 лет" },
   { name: "Дмитрий Карпов", role: "Контент-стратег", exp: "6 лет" },
   { name: "Анна Белова", role: "Link Building Lead", exp: "7 лет" },
 ];
