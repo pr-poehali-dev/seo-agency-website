@@ -238,7 +238,7 @@ export default function Index() {
       <section className="relative min-h-screen flex items-center pt-16 bg-navy overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://cdn.poehali.dev/projects/15b43cac-ac8a-44c1-a7f7-849d90c63898/files/8881fd96-8614-4463-aff1-0758ce0eb48f.jpg"
+            src="https://cdn.poehali.dev/projects/15b43cac-ac8a-44c1-a7f7-849d90c63898/files/e2450ca7-ee67-453d-a2a4-61639e2120de.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
