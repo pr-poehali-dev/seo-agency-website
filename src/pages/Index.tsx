@@ -511,7 +511,7 @@ export default function Index() {
 
               <div className="flex flex-col gap-5">
                 {[
-                  { icon: "Mail", text: "hello@apex-seo.ru" },
+                  { icon: "Mail", text: "sibpion@ya.ru" },
                   { icon: "Phone", text: "+7 (495) 123-45-67" },
                   { icon: "MapPin", text: "Москва, Пресненская наб., 12" },
                   { icon: "Clock", text: "Пн–Пт, 9:00–19:00 МСК" },
