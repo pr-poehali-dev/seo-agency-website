@@ -141,15 +141,36 @@ const FAQ_ITEMS = [
   },
 ];
 
+const SEND_LEAD_URL = "https://functions.poehali.dev/72acb107-3aac-4dac-b530-aed1351cc518";
+
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [form, setForm] = useState({ name: "", company: "", phone: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setSendError("");
+    try {
+      const res = await fetch(SEND_LEAD_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setSendError("Не удалось отправить заявку. Попробуйте позже.");
+      }
+    } catch {
+      setSendError("Ошибка соединения. Попробуйте позже.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -599,10 +620,15 @@ export default function Index() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-foreground text-background font-body text-sm hover:bg-foreground/85 transition-colors duration-200"
+                    disabled={sending}
+                    className="w-full py-4 bg-foreground text-background font-body text-sm hover:bg-foreground/85 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Отправить заявку →
+                    {sending ? "Отправляем..." : "Отправить заявку →"}
                   </button>
+
+                  {sendError && (
+                    <p className="font-body text-xs text-red-500 text-center">{sendError}</p>
+                  )}
 
                   <p className="font-body text-xs text-muted-foreground text-center">
                     Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности

@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Валидация — нет обязательных полей",
+      "method": "POST",
+      "path": "/",
+      "body": {"test": true},
+      "expectedStatus": 400
+    }
+  ]
+}
