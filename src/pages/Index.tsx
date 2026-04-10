@@ -513,8 +513,6 @@ export default function Index() {
                 {[
                   { icon: "Mail", text: "sibpion@ya.ru" },
                   { icon: "Phone", text: "+7 913 202-19-14" },
-                  { icon: "MapPin", text: "Москва, Пресненская наб., 12" },
-                  { icon: "Clock", text: "Пн–Пт, 9:00–19:00 МСК" },
                 ].map((c) => (
                   <div key={c.text} className="flex items-center gap-4">
                     <div className="w-9 h-9 border border-border flex items-center justify-center text-copper flex-shrink-0">
