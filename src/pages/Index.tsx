@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const NAV_LINKS = [
   { label: "Услуги", href: "#services" },
@@ -174,6 +175,7 @@ export default function Index() {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -663,5 +665,7 @@ export default function Index() {
         </div>
       </footer>
     </div>
+    <WhatsAppButton />
+    </>
   );
 }
